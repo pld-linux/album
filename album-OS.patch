@@ -1,0 +1,16 @@
+diff -durN album-2.35.orig/album album-2.35/album
+--- album-2.35.orig/album	Wed May 22 20:22:35 2002
++++ album-2.35/album	Fri May 24 08:22:41 2002
+@@ -165,8 +165,10 @@
+   # (Need to figure this out - make a tmpfile?  $DEV_NULL = ...?)
+ 
+   # 6) .exe extension if we don't have it
+-  $CONVERT =~ s/(\.exe)?$/.exe/ig;
+-  $IDENTIFY =~ s/(\.exe)?$/.exe/ig;
++  if ($CRAPPY_OS) {
++    $CONVERT =~ s/(\.exe)?$/.exe/ig;
++    $IDENTIFY =~ s/(\.exe)?$/.exe/ig;
++  }
+ 
+ #########################
+ # URLs for these scripts - don't change
