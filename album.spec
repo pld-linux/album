@@ -7,6 +7,7 @@ Release:	1
 License:	distributable
 Group:		Applications/Graphics
 Source0:	http://marginalhacks.com/bin/%{name}.tar.gz
+# Source0-md5:	a8552d5428caf1f63552649fb57954ad
 URL:		http://marginalhacks.com/Hacks/album/
 BuildArch:	noarch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
