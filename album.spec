@@ -19,23 +19,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 An HTML photo album generator that supports themes. It takes a
 directory of images and creates all the thumbnails and HTML that you
 need. It's fast, easy to use, and very powerful.
-
 Features:
-    - You can use themes to choose or redesign the album "look and feel."
-    - Recursively descends directories to make a hierarchy of photo albums
-    - Maintains aspect ratio while constraining size of thumbnails
+- You can use themes to choose or redesign the album "look and feel."
+- Recursively descends directories to make a hierarchy of photo albums
+- Maintains aspect ratio while constraining size of thumbnails
 
 %description -l pl
 Generator albumów fotograficznych z obs³ug± motywów. Przyjmuje katalog
 ze zdjêciami i tworzy wszystkie potrzebne miniaturki oraz pliki HTML.
 Jest szybki, prosty w u¿yciu i ma du¿e mo¿liwo¶ci.
-
 Mo¿liwo¶ci:
- - pozwala na u¿ywanie motywów do wybrania lub zmiany "look and feel"
-   albumu
- - rekurencyjnie przegl±da katalogi tworz±c hierarchiê albumów
-   fotograficznych
- - zachowuje proporcje przy ograniczaniu rozmiaru miniaturek.
+- pozwala na u¿ywanie motywów do wybrania lub zmiany "look and feel"
+  albumu
+- rekurencyjnie przegl±da katalogi tworz±c hierarchiê albumów
+  fotograficznych
+- zachowuje proporcje przy ograniczaniu rozmiaru miniaturek.
 
 %prep
 %setup -q
