@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	HTML photo album generator
-Summary(pl):	Generator albumów foto
+Summary(pl):	Generator albumów fotograficznych w HTML
 Name:		album
 Version:	2.35
 Release:	1
@@ -9,7 +9,7 @@ Group:		Applications/Graphics
 Source0:	http://marginalhacks.com/bin/%{name}.tar.gz
 Patch0:		%{name}-OS.patch
 URL:		http://marginalhacks.com/Hacks/album/
-Buildarch:	noarch
+BuildArch:	noarch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 Requires:	ImageMagick
 %requires_eq	perl
@@ -26,7 +26,16 @@ Features:
     - Maintains aspect ratio while constraining size of thumbnails
 
 %description -l pl
+Generator albumów fotograficznych z obs³ug± motywów. Przyjmuje katalog
+ze zdjêciami i tworzy wszystkie potrzebne miniaturki oraz pliki HTML.
+Jest szybki, prosty w u¿yciu i ma du¿e mo¿liwo¶ci.
 
+Mo¿liwo¶ci:
+ - pozwala na u¿ywanie motywów do wybrania lub zmiany "look and feel"
+   albumu
+ - rekurencyjnie przegl±da katalogi tworz±c hierarchiê albumów
+   fotograficznych
+ - zachowuje proporcje przy ograniczaniu rozmiaru miniaturek.
 
 %prep
 %setup -qc %{name}-%{version}
@@ -37,13 +46,11 @@ if [ "$REAL_VERSION" != "%{version}" ] ; then
 fi
 %patch0 -p1
 
-%build
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}}
 
-install album caption_index  $RPM_BUILD_ROOT%{_bindir}
+install album caption_index $RPM_BUILD_ROOT%{_bindir}
 cp -R Themes $RPM_BUILD_ROOT%{_datadir}/%{name}
 
 %clean
