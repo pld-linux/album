@@ -2,12 +2,12 @@
 Summary:	HTML photo album generator
 Summary(pl):	Generator albumów fotograficznych w HTML-u
 Name:		album
-Version:	2.52
+Version:	3.02
 Release:	1
 License:	distributable
 Group:		Applications/Graphics
 Source0:	http://marginalhacks.com/bin/%{name}.tar.gz
-# Source0-md5:	62a3a3eadd697f228548235c6488e685
+# Source0-md5:	5117002da855d969b12516debe26ba5e
 URL:		http://marginalhacks.com/Hacks/album/
 BuildArch:	noarch
 BuildRequires:	rpm-perlprov >= 3.0.3-18
@@ -38,9 +38,9 @@ Mo¿liwo¶ci:
  - zachowuje proporcje przy ograniczaniu rozmiaru miniaturek.
 
 %prep
-%setup -qc %{name}-%{version}
-REAL_VERSION=`./album --version | awk '/album version/ { print $5 }'`
-if [ "$REAL_VERSION" != "%{version}" ] ; then
+%setup -q
+REAL_VERSION=`./album --version 2>&1 | grep '^This' | awk '/This\ is\ album/ { print $4 }'`
+if [ "$REAL_VERSION" != "v%{version}" ] ; then
 	echo "Package/Source version mismatch!"
 	exit 1
 fi
@@ -57,6 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Documentation.html License.txt
+%doc Docs/* License.txt
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/%{name}.1*
