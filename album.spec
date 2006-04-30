@@ -2,12 +2,12 @@
 Summary:	HTML photo album generator
 Summary(pl):	Generator albumów fotograficznych w HTML-u
 Name:		album
-Version:	3.10
+Version:	3.11
 Release:	1
 License:	distributable
 Group:		Applications/Graphics
 Source0:	http://marginalhacks.com/bin/%{name}.tar.gz
-# Source0-md5:	9cbbb650db20a2b0db0e77eccf25672b
+# Source0-md5:	b146bbbe040b147fdb608ae076eef635
 URL:		http://marginalhacks.com/Hacks/album/
 BuildRequires:	rpm-perlprov >= 3.0.3-18
 Requires:	ImageMagick
