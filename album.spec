@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	HTML photo album generator
-Summary(pl):	Generator albumÛw fotograficznych w HTML-u
+Summary(pl.UTF-8):   Generator album√≥w fotograficznych w HTML-u
 Name:		album
 Version:	3.11
 Release:	1
@@ -23,14 +23,14 @@ Features:
 - Recursively descends directories to make a hierarchy of photo albums
 - Maintains aspect ratio while constraining size of thumbnails
 
-%description -l pl
-Generator albumÛw fotograficznych z obs≥ug± motywÛw. Przyjmuje katalog
-ze zdjÍciami i tworzy wszystkie potrzebne miniaturki oraz pliki HTML.
-Jest szybki, prosty w uøyciu i ma duøe moøliwo∂ci.
-Moøliwo∂ci:
-- pozwala na uøywanie motywÛw do wybrania lub zmiany "look and feel"
+%description -l pl.UTF-8
+Generator album√≥w fotograficznych z obs≈ÇugƒÖ motyw√≥w. Przyjmuje katalog
+ze zdjƒôciami i tworzy wszystkie potrzebne miniaturki oraz pliki HTML.
+Jest szybki, prosty w u≈ºyciu i ma du≈ºe mo≈ºliwo≈õci.
+Mo≈ºliwo≈õci:
+- pozwala na u≈ºywanie motyw√≥w do wybrania lub zmiany "look and feel"
   albumu
-- rekurencyjnie przegl±da katalogi tworz±c hierarchiÍ albumÛw
+- rekurencyjnie przeglƒÖda katalogi tworzƒÖc hierarchiƒô album√≥w
   fotograficznych
 - zachowuje proporcje przy ograniczaniu rozmiaru miniaturek.
 
