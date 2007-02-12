@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	HTML photo album generator
-Summary(pl.UTF-8):   Generator albumów fotograficznych w HTML-u
+Summary(pl.UTF-8):	Generator albumów fotograficznych w HTML-u
 Name:		album
 Version:	3.11
 Release:	1
